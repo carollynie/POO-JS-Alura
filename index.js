@@ -5,16 +5,16 @@ class cliente {
 
 class contaCorrente {
     agencia
-    #saldo = 0  //o saldo é privado, e só pode ser mudado a partir da função e o valor inicial é zero
+    _saldo = 0  //o saldo é privado, e só pode ser mudado a partir da função e o valor inicial é zero
 
     sacar(valor) {
-        if (this.#saldo >= valorSacado) { //o this deixarar dinômico a conta corrente que queremos fazer o saque
-            this.#saldo -= valorSacado //subtrai valor do saldo
+        if (this._saldo >= valorSacado) { //o this deixarar dinômico a conta corrente que queremos fazer o saque
+            this._saldo -= valorSacado //subtrai valor do saldo
         }
     }
     depositar(valor){
         if(valor>0){
-            this.#saldo+=valor
+            this._saldo+=valor
         }
     }
 }
