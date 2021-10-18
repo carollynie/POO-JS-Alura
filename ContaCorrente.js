@@ -15,6 +15,10 @@ class contaCorrente {
         this._saldo += valor
 
     }
+    transferir(valor, conta){
+        const valorSacado = this.sacar(valor) //sacar o valor presente em uma conta
+        conta.depositar(valorSacado) //e deposita em outra o valor sacado da variável anterior
+    }
 }
 
 module.exports = contaCorrente

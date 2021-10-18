@@ -15,4 +15,11 @@ contaCorrente1.agencia = 1001
 
 contaCorrente1.depositar(100)
 contaCorrente1.sacar(30)
+
+const contaCorrente2 = new contaCorrente()
+contaCorrente2.cliente = cliente2
+contaCorrente2.agencia = 2003
+
+
+contaCorrente1.transferir(30, contaCorrente2)
 console.log(contaCorrente1)
