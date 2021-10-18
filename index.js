@@ -12,6 +12,7 @@ cliente2.cpf = 32022233309
 
 const contaCorrente1 = new contaCorrente()
 contaCorrente1.agencia = 1001
+contaCorrente1.cliente = cliente1
 
 contaCorrente1.depositar(100)
 contaCorrente1.sacar(30)
@@ -23,3 +24,4 @@ contaCorrente2.agencia = 2003
 
 contaCorrente1.transferir(30, contaCorrente2)
 console.log(contaCorrente1)
+console.log(contaCorrente2)
