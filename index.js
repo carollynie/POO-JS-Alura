@@ -14,5 +14,6 @@ contaCorrente1.sacar(30)
 contaCorrente1.transferir(30, contaCorrente2)
 
 
-//console.log(contaCorrente1)
-//console.log(contaCorrente2)
+console.log(contaCorrente1)
+console.log(contaCorrente2)
+console.log(contaCorrente.numeroDeContas)

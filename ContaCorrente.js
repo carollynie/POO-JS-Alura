@@ -1,6 +1,7 @@
 const cliente = require("./Cliente")
 
 class contaCorrente {
+    static numeroDeContas = 0
     agencia
     _cliente
 
@@ -21,9 +22,11 @@ class contaCorrente {
     }
 
     constructor(cliente, agencia) {
-        this.agencia = agencia
         this.cliente = cliente
+        this.agencia = agencia
+        contaCorrente.numeroDeContas += 1
     }
+
     sacar(valor) {
         if (this._saldo >= valor) { //o this deixarar dinômico a conta corrente que queremos fazer o saque
             this._saldo -= valor //subtrai valor do saldo
