@@ -2,26 +2,17 @@ const cliente = require("./Cliente")
 const contaCorrente = require("./ContaCorrente")
 
 
-const cliente1 = new cliente() //instancia da classe
-cliente1.nome = "Carol"
-cliente1.cpf = 11122233309
+const cliente1 = new cliente("Carol",32198534850) //instancia da classe
+const cliente2 = new cliente("Mikael",32022233309)
 
-const cliente2 = new cliente()
-cliente2.nome = "Mikael"
-cliente2.cpf = 32022233309
+const contaCorrente1 = new contaCorrente(cliente1,1001)
+const contaCorrente2 = new contaCorrente(cliente2,2003)
 
-const contaCorrente1 = new contaCorrente()
-contaCorrente1.agencia = 1001
-contaCorrente1.cliente = cliente1
 
 contaCorrente1.depositar(100)
 contaCorrente1.sacar(30)
-
-const contaCorrente2 = new contaCorrente()
-contaCorrente2.cliente = cliente2
-contaCorrente2.agencia = 2003
-
-
 contaCorrente1.transferir(30, contaCorrente2)
-console.log(contaCorrente1)
-console.log(contaCorrente2)
+
+
+//console.log(contaCorrente1)
+//console.log(contaCorrente2)

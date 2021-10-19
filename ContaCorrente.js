@@ -1,21 +1,28 @@
+const cliente = require("./Cliente")
+
 class contaCorrente {
     agencia
     _cliente
 
     set cliente(novoValor) { //método para atribuir valor
-        if (novoValor instanceof Cliente) { //o valor será atribuido apenas se for instancia de cliente
+        if (novoValor instanceof cliente) { //o valor será atribuido apenas se for instancia de cliente
             this._cliente = novoValor
         }
     }
 
-    get cliente(){
+    get cliente() {
         return this._cliente
     }
 
     _saldo = 0  //o saldo é privado, e só pode ser mudado a partir da função e o valor inicial é zero
 
-    get saldo(){
+    get saldo() {
         return this._saldo //retorna o valor sem alterá-lo
+    }
+
+    constructor(cliente, agencia) {
+        this.agencia = agencia
+        this.cliente = cliente
     }
     sacar(valor) {
         if (this._saldo >= valor) { //o this deixarar dinômico a conta corrente que queremos fazer o saque
